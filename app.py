@@ -19,9 +19,9 @@ while True:
                         3: "stone"}
 
     #emoji version of computers guess
-    guess_emojised = {"scissors": "✌",
-                        "paper": "🖐",
-                        "stone": "✊"}
+    guess_emojised = {"scissors": "scissors",
+                        "paper": "paper",
+                        "stone": "stone"}
                         
     #available answers
     available_answers = ["scissors", "paper", "stone"]
@@ -32,7 +32,7 @@ while True:
 
     while True:
         try:
-            manual_answer = str(input("please input a guess between stone, paper or scissors : ")).casefold()
+            manual_answer = str(input("please input a guess between stone, paper or scissors and 'end' to quit game : ")).casefold()
             break
         except (EOFError, KeyboardInterrupt):
             print()
@@ -52,6 +52,7 @@ computers guess was {guess_emojised["scissors"]}
 your guess was "scissors" so you drew a point
                 """)
                 points_count += 0#drawn
+                print("the current points is", points_count)
             
             elif guess_available[computer_guess] == "stone":
                 print(F"""
@@ -59,6 +60,7 @@ computers guess was {guess_emojised["stone"]}
 your guess was "scissors" so you lost a point        
                 """)
                 points_count -= 1#lost
+                print("the current points is", points_count)
             
             elif guess_available[computer_guess] == "paper":
                 print(F"""
@@ -66,6 +68,7 @@ computers guess was {guess_emojised["paper"]}
 your guess was "scissors" so you won a point        
                 """)
                 points_count += 1#won
+                print("the current points is", points_count)
             
             else:
                 print("Oops!!, something went wrong")
@@ -78,6 +81,8 @@ computers guess was {guess_emojised["scissors"]}
 your guess was "stone" so you won a point        
                 """)
                 points_count += 1#won
+                print("the current points is", points_count)
+
             
             elif guess_available[computer_guess] == "stone":
                 print(F"""
@@ -85,6 +90,7 @@ computers guess was {guess_emojised["stone"]}
 your guess was "stone" so you drew a point        
                 """)
                 points_count += 0#drawn
+                print("the current points is", points_count)
             
             elif guess_available[computer_guess] == "paper":
                 print(F"""
@@ -92,6 +98,7 @@ computers guess was {guess_emojised["paper"]}
 your guess was "stone" so you lost a point        
                 """)
                 points_count -= 1#lost
+                print("the current points is", points_count)
             
             else:
                 print("Oops!!, something went wrong")
@@ -104,6 +111,7 @@ computers guess was {guess_emojised["scissors"]}
 your guess was "paper" so you lost a point        
                 """)
                 points_count -= 1#lost
+                print("the current points is", points_count)
             
             elif guess_available[computer_guess] == "stone":
                 print(F"""
@@ -111,6 +119,7 @@ computers guess was {guess_emojised["stone"]}
 your guess was "paper" so you won a point            
                 """)
                 points_count += 1#won
+                print("the current points is", points_count)
             
             elif guess_available[computer_guess] == "paper":
                 print(F"""
@@ -118,6 +127,7 @@ computers guess was {guess_emojised["paper"]}
 your guess was "paper" so you drew a point        
                 """)
                 points_count += 0#drawn
+                print("the current points is", points_count)
             
             else:
                 print("Oops!!, something went wrong")
