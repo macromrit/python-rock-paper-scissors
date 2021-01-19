@@ -3,7 +3,7 @@
 
 #import random for random outcomes from the computer
 import random
-
+points_count = 0
 #creating a infinite loops to make the user play as much as he wants to and end the game whenever required
 while True:
     #assigning the value to choose between randomly by the computer
@@ -28,7 +28,7 @@ while True:
                         
 
 
-    points_count = 0#to check the points and produce them as a output alsoknown as prestatement for while loops
+    #to check the points and produce them as a output alsoknown as prestatement for while loops
 
     while True:
         try:
@@ -84,7 +84,7 @@ your guess was "stone" so you won a point
 computers guess was {guess_emojised["stone"]}         
 your guess was "stone" so you drew a point        
                 """)
-                points_count =+ 0#drawn
+                points_count += 0#drawn
             
             elif guess_available[computer_guess] == "paper":
                 print(F"""
@@ -124,4 +124,3 @@ your guess was "paper" so you drew a point
 
     else:
         print("please give a valid input")
-
