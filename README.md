@@ -1,1 +1,1 @@
-# python-rock
+# python-rock-paper-scissors-program
